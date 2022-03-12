@@ -1,4 +1,5 @@
 package com.solemate;
+import android.content.res.Configuration;
 
 import android.app.Application;
 import android.content.Context;
@@ -14,7 +15,7 @@ import java.util.List;
 public class MainApplication extends Application implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost =
-      new ReactNativeHost(this) {
+          new ReactNativeHost(this) {
         @Override
         public boolean getUseDeveloperSupport() {
           return BuildConfig.DEBUG;
@@ -45,6 +46,7 @@ public class MainApplication extends Application implements ReactApplication {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this, getReactNativeHost().getReactInstanceManager());
+
   }
 
   /**
@@ -77,4 +79,6 @@ public class MainApplication extends Application implements ReactApplication {
       }
     }
   }
+
+
 }
